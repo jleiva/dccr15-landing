@@ -2,4 +2,4 @@
 * Sass compila con libSass
 * Instalar npm, si no lo tenes.
 * npm install una vez clonado el repo
-* grunt sass y boom!
+* el comando para compilar y dejar el watch corriendo -> grunt

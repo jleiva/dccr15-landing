@@ -1,5 +1,9 @@
 @import "partials/variables";
+
+// No tenemos Compass, cualquier mixin que se necesite lo
+// incluimos en el partial
 @import "partials/mixins";
+
 @import "partials/base";
 @import "partials/modules";
 @import "partials/layout";
