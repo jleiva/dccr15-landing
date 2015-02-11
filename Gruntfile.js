@@ -19,6 +19,17 @@ module.exports = function (grunt) {
             }
         },
 
+        scsslint: { 
+            allFiles: [ 
+              'sass/**/*.scss', 
+            ], 
+            options: { 
+              config: '.scss-lint.yml', 
+              reporterOutput: 'scss-lint-report.xml', 
+              colorizeOutput: true 
+            }, 
+        },
+
         // Compass and scss
         sass: {
             options: {
@@ -27,7 +38,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/main.css': 'sass/main.scss'
+                    'css/styles.css': 'sass/styles.scss'
                 }
             }
         }
