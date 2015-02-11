@@ -1,0 +1,24 @@
+// 1. Event Date Info
+// 2. Intro Info
+
+// =Event Date Info
+// ===============
+.event-date {
+    color: $green;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.event-venue {
+    display: block;
+}
+
+// =Intro Info
+// ===============
+.intro-tags {
+	@include hide-text;
+    background: url(../img/desc-balls.png) 0 0 no-repeat;
+    @include background-size(100%, 100%);
+    height: 400px;
+    width: 212px;
+}

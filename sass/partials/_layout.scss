@@ -1,7 +1,10 @@
-.header {
-
+.group {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 80%; 
 }
 
-.intro {
-    background-color: #f7f7f7;
+.section {
+    @include micro-clearfix;
+    padding: 20px 10px;
 }
