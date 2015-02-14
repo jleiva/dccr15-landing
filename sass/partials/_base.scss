@@ -3,8 +3,7 @@
 // Estilos base y generales como typo.
 //
 // 1. Brand
-// 2.
-//
+// 2. Typo
 
 * {
     @include box-sizing(border-box);
@@ -21,6 +20,7 @@ body {
 // =Brand
 // =======
 //
+
 .logo {
     @include hide-text;
     background: url(../img/logo.png) 0 0 no-repeat;
@@ -30,4 +30,12 @@ body {
     width: 238px;
 }
 
+// =Typo
+// =======
+//
 
+.h-section {
+    font-family: $headings;
+    text-align: center;
+    text-transform: uppercase;
+}
