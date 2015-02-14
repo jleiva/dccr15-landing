@@ -1,8 +1,60 @@
-// 1. Event Date Info
-// 2. Intro Info
+// 0. Global
+// 1. buttons
+// 2. Event Date Info
+// 3. Intro Info
+// 4. Quotes
+
+// =Global
+// ===============
+blockquote {
+  margin: 0;
+}
+.h-section {
+  text-align: center;
+  text-transform: uppercase;
+}
+.colored-green {
+  color: #33b78b;
+  font-weight: bold;
+}
+
+// =Buttons
+// ===============
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  background: #555;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.button-red {
+  @extend .button;
+  background: #e35534;
+  &:hover {
+    background: darken(#e35534, 10%);
+  }
+}
+.button-download {
+  margin-left: 10px;
+}
 
 // =Event Date Info
 // ===============
+.header {
+  .group {
+    background: url(../img/illus-intro-left.jpg), url(../img/illus-intro-right.jpg);
+    background-repeat: no-repeat;
+    background-size: 306px 382px, 254px 400px;
+    background-position: left center, right center;
+  }
+}
 .event-date {
     color: $green;
     line-height: 1.25;
@@ -16,9 +68,56 @@
 // =Intro Info
 // ===============
 .intro-tags {
-	@include hide-text;
+    @include hide-text;
     background: url(../img/desc-balls.png) 0 0 no-repeat;
     @include background-size(100%, 100%);
     height: 400px;
     width: 212px;
+    float: left;
+    margin-right: 85px;
+}
+.intro-description {
+  background: url(../img/desc-illus.png) bottom right no-repeat;
+  background-size: 313px 198px;
+  padding-bottom: 200px;
+}
+
+// =Quotes
+// ===============
+.historias {
+  background: url(../img/pattern.jpg);
+  text-align: center;
+  .h-section {
+    color: #fff;
+  }
+}
+.quote {
+  @extend %block-inline;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  margin-right: 20px;
+  padding: 20px;
+  text-align: left;
+  width: 27%;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// =Sponsors 
+// ===============
+.sponsors {
+  .group {
+    background: url(../img/sponsors-balls.png) no-repeat right center;
+    background-size: 352px 326px;
+    padding: 20px 50% 20px 0;
+    padding-right: 50%;
+  }
+}
+
+// =Location
+// ===============
+.location {
+  width: 100%;
 }

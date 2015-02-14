@@ -13,9 +13,18 @@
 body {
     background-color: $black;
     border-top: 20px solid $green;
-    color: $black;
+    color: #727272;
     font-family: $base-font;
     font-size: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,h2,h3, h4, h5, h6 {
+    margin-top: 0;
 }
 
 // =Brand
@@ -29,5 +38,4 @@ body {
     margin: 0 auto;
     width: 238px;
 }
-
 
