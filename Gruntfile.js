@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
-                tasks: ['sass:dist']
+                tasks: ['sass:dist', 'postcss:dist']
             },
             livereload: {
                 files: ['*.html', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
@@ -30,11 +30,24 @@ module.exports = function (grunt) {
             }, 
         },
 
+        postcss: {
+            options: {
+              map: true,
+              processors: [
+                require('autoprefixer-core')({browsers: 'last 2 versions'}).postcss,
+                require('csswring').postcss
+              ]
+            },
+            dist: {
+              src: 'css/*.css'
+            }
+        },
+
         // Compass and scss
         sass: {
             options: {
                 sourceMap: true,
-                outputStyle: 'compressed'
+                outputStyle: 'expanded'
             },
             dist: {
                 files: {
