@@ -29,7 +29,6 @@
 ///   }
 ///
 /// source: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_hide-text.scss
-
 @mixin hide-text($height: null) {
   overflow: hidden;
   text-indent: 101%;
@@ -55,4 +54,35 @@
     &:after {
         clear: both;
     }
+}
+
+// Media Queries
+// --------------------
+// Valores de MQ estan definidos en _variables.scss
+// Si se incluyen mas breakpoint, se puede hacer una lista y modificar el 
+// mixin para que sea mas inteligente, pero para lo que tenemos funciona.
+//
+// selector {
+//   @include small {
+//     proiedad: valor; 
+//   }    
+// }
+//
+
+@mixin small {
+  @media (min-width: #{$baby-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$mama-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$papa-width}) {
+    @content;
+  }
 }

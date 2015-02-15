@@ -1,15 +1,14 @@
 // 0. Global
-// 1. buttons
+// 1. Buttons
 // 2. Event Date Info
 // 3. Intro Info
 // 4. Quotes
+// 5. Register
+// 6. Sponsors
+// 7. Location
 
 // =Global
 // ===============
-blockquote {
-  margin: 0;
-}
-
 .h-section {
   text-align: center;
   text-transform: uppercase;
@@ -22,23 +21,8 @@ blockquote {
 
 // =Buttons
 // ===============
-.button {
-  display: inline-block;
-  vertical-align: middle;
-  background: #555;
-  border-radius: 3px;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-      -ms-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
-}
-
-.button-red {
-    @extend .button;
+.btn-cta {
+    @extend %btn;
     background: #e35534;
 
     &:hover {
@@ -46,7 +30,7 @@ blockquote {
     }
 }
 
-.button-download {
+.btn-action {
     margin-left: 10px;
 }
 
@@ -63,7 +47,10 @@ blockquote {
 
 .event-date {
     color: $green;
+    font-size: 1.5em;
+    font-weight: normal;
     line-height: 1.25;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -73,6 +60,14 @@ blockquote {
 
 // =Intro Info
 // ===============
+// .l-intro {
+//     .group {
+//         background: url(../img/desc-bg.png); // Hay que cambiar la imagen, tiene fondo blanco
+//         background-repeat: no-repeat;
+//         background-position: right center;
+//     }
+// }
+
 .intro-tags {
     @include hide-text;
     background: url(../img/desc-balls.png) 0 0 no-repeat;
@@ -84,9 +79,11 @@ blockquote {
 }
 
 .intro-description {
-  background: url(../img/desc-illus.png) bottom right no-repeat;
-  background-size: 313px 198px;
-  padding-bottom: 200px;
+    background: url(../img/desc-illus.png) bottom right no-repeat;
+    background-size: 313px 198px;
+    font-size: 1.25em;
+    line-height: 1.45;
+    padding: 20px 0 230px 35%;
 }
 
 // =Quotes
@@ -94,36 +91,66 @@ blockquote {
 .l-historias {
   background: url(../img/pattern.jpg);
   text-align: center;
-
-    .h-section {
-        color: $white;
-    }
 }
 
 .quote {
     @extend %block-inline;
     background-color: #fff;
     border-radius: 3px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-    margin-right: 20px;
-    padding: 20px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+    margin-right: 1%;
+    padding: 40px;
     text-align: left;
-    width: 27%;
+
+    @include medium {
+        margin: 40px 1% 40px 0;
+        width: 32%;
+    }
 
     &:last-child {
         margin-right: 0;
     }
 }
 
+.quote-aut {
+    font-style: normal;
+
+    strong {
+        @include small {
+            display: block;
+        }
+    }
+}
+
+// =Register
+// ===============
+.social-prof {
+    list-style: none; // por si es una lista
+}
+
+.social-prof-action {
+    color: $green;
+    text-decoration: none;
+}
+
+.social-prof-item {
+    font-family: $headings;
+    margin: 5px 0;
+}
+
 // =Sponsors 
 // ===============
 .l-sponsors {
-  .group {
-    background: url(../img/sponsors-balls.png) no-repeat right center;
-    background-size: 352px 326px;
-    padding: 20px 50% 20px 0;
-    padding-right: 50%;
-  }
+    li,
+    p {
+        font-size: 1.125em;
+        line-height: 1.45;
+    }
+    .group {
+        background: url(../img/sponsors-balls.png) no-repeat right center;
+        background-size: 352px 326px;
+        padding: 20px 40% 20px 0;
+    }
 }
 
 // =Location
