@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
-                tasks: ['sass:dist']
+                tasks: ['sass:dist', 'postcss']
             },
             livereload: {
                 files: ['*.html', 'js/**/*.{js,json}', 'css/*.css','img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
@@ -34,8 +34,7 @@ module.exports = function (grunt) {
             options: {
               map: true,
               processors: [
-                require('autoprefixer-core')({browsers: 'last 2 versions'}).postcss,
-                require('csswring').postcss
+                require('autoprefixer-core')({browsers: 'last 2 versions'}).postcss
               ]
             },
             dist: {
@@ -47,15 +46,26 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 sourceMap: true,
-                outputStyle: 'expanded'
+                outputStyle: 'nested'
             },
             dist: {
                 files: {
                     'css/styles.css': 'sass/styles.scss'
                 }
+            },
+            prod: {
+                options: {
+                  outputStyle: 'compressed'
+                },
+                files: {
+                    'css/styles.css': 'sass/styles.scss'
+                }
             }
-        }
+        },
+
+
     });
 
     grunt.registerTask('default', ['sass:dist', 'watch']);
+    grunt.registerTask('prod', ['sass:prod', 'postcss']);
 };
