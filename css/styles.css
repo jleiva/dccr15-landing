@@ -150,7 +150,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -264,8 +263,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -342,9 +339,6 @@ h1, h2, h3, h4, h5, h6 {
   text-indent: 101%;
   white-space: nowrap;
   background: url(../img/logo.png) 0 0 no-repeat;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
   height: 300px;
   margin: 0 auto;
@@ -354,7 +348,6 @@ blockquote {
   margin: 0 0 15px; }
 
 .call-out {
-  font-family: 'Nunito', Helvetica, Arial, sans-serif;
   font-size: 1.125em;
   margin-top: 40px; }
   .call-out a {
@@ -383,10 +376,6 @@ blockquote {
     margin: 20px auto 0;
     width: 40px; }
 
-.quote {
-  display: inline-block;
-  vertical-align: top; }
-
 .btn-cta {
   display: inline-block;
   vertical-align: middle;
@@ -395,111 +384,7 @@ blockquote {
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-
-.h-section {
-  text-align: center;
-  text-transform: uppercase; }
-
-.colored-green {
-  color: #33b78b;
-  font-weight: bold; }
-
-.btn-cta {
-  background: #e35534; }
-  .btn-cta:hover {
-    background: #c83c1c; }
-
-.btn-action {
-  margin-left: 10px; }
-
-.l-header .group {
-  background: url(../img/illus-intro-left.jpg), url(../img/illus-intro-right.jpg);
-  background-repeat: no-repeat;
-  background-size: 306px 382px, 254px 400px;
-  background-position: left center, right center; }
-
-.event-date {
-  color: #25a879;
-  font-size: 1.5em;
-  font-weight: normal;
-  line-height: 1.25;
-  margin-top: 40px;
-  text-align: center; }
-
-.event-venue {
-  display: block; }
-
-.intro-tags {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
-  background: url(../img/desc-balls.png) 0 0 no-repeat;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%;
-  height: 400px;
-  width: 212px;
-  float: left;
-  margin-right: 85px; }
-
-.intro-description {
-  background: url(../img/desc-illus.png) bottom right no-repeat;
-  background-size: 313px 198px;
-  font-size: 1.25em;
-  line-height: 1.45;
-  padding: 20px 0 230px 35%; }
-
-.l-historias {
-  background: url(../img/pattern.jpg);
-  text-align: center; }
-
-.quote {
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  margin-right: 1%;
-  padding: 40px;
-  text-align: left; }
-  @media (min-width: 720px) {
-    .quote {
-      margin: 40px 1% 40px 0;
-      width: 32%; } }
-  .quote:last-child {
-    margin-right: 0; }
-
-.quote-aut {
-  font-style: normal; }
-  @media (min-width: 640px) {
-    .quote-aut strong {
-      display: block; } }
-
-.social-prof {
-  list-style: none; }
-
-.social-prof-action {
-  color: #25a879;
-  text-decoration: none; }
-
-.social-prof-item {
-  font-family: 'Nunito', Helvetica, Arial, sans-serif;
-  margin: 5px 0; }
-
-.l-sponsors li, .l-sponsors p {
-  font-size: 1.125em;
-  line-height: 1.45; }
-.l-sponsors .group {
-  background: url(../img/sponsors-balls.png) no-repeat right center;
-  background-size: 352px 326px;
-  padding: 20px 40% 20px 0; }
-
-.location {
-  width: 100%; }
 
 .group {
   margin: 0 auto;
@@ -532,4 +417,188 @@ blockquote {
 .l-sponsors {
   background-color: #fff; }
 
+.h-section {
+  text-align: center;
+  text-transform: uppercase; }
+
+.colored-green {
+  color: #33b78b;
+  font-weight: bold; }
+
+.btn-cta {
+  background: #e35534; }
+  .btn-cta:hover {
+    background: #c83c1c; }
+
+.btn-action {
+  margin-left: 10px; }
+
+@media screen and (max-width: 767px) {
+  .l-header {
+    padding: 30px 0; }
+    .l-header .group {
+      width: 100%; } }
+@media (min-width: 767px) {
+  .l-header .group {
+    background: url(../img/illus-intro-left.jpg), url(../img/illus-intro-right.jpg);
+    background-repeat: no-repeat;
+    background-size: 306px 382px, 254px 400px;
+    background-position: left center, right center; } }
+
+.event-date {
+  color: #25a879;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.25;
+  margin-top: 40px;
+  text-align: center; }
+
+.event-venue {
+  display: block; }
+
+.intro-tags {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  background: url(../img/desc-balls.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+  height: 400px;
+  width: 212px;
+  margin: 0 auto; }
+  @media (min-width: 640px) {
+    .intro-tags {
+      margin-right: 85px;
+      float: left;
+      margin: auto; } }
+
+.intro-description {
+  background: url(../img/desc-illus.png) bottom center no-repeat;
+  background-size: 313px 198px;
+  font-size: 0.9em;
+  line-height: 1.45;
+  padding: 20px 0 230px 0; }
+  @media (min-width: 640px) {
+    .intro-description {
+      padding: 20px 0 230px 35%;
+      background-position: bottom right; } }
+  @media (min-width: 767px) {
+    .intro-description {
+      font-size: 1.25em; } }
+
+.l-historias {
+  background: url(../img/pattern.jpg);
+  text-align: center; }
+
+.quotes-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 767px) {
+    .quotes-wrap {
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.quote {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-right: 1%;
+  padding: 40px;
+  text-align: left;
+  margin-top: 100px;
+  margin-right: 0; }
+  @media (min-width: 767px) {
+    .quote {
+      margin: 100px 2% 40px 0;
+      width: 30%; } }
+  .quote:last-child {
+    margin-right: 0; }
+
+.quote-avatar {
+  width: 90px;
+  height: 90px;
+  margin: -100px auto 20px;
+  background: #fff;
+  border-radius: 100%;
+  border: solid 4px #fff;
+  overflow: hidden; }
+
+.quote-aut {
+  font-style: normal; }
+  @media (min-width: 640px) {
+    .quote-aut strong {
+      display: block; } }
+
+.social-prof {
+  list-style: none; }
+
+.social-prof-action {
+  color: #25a879;
+  text-decoration: none; }
+
+.social-prof-item {
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+  margin: 5px 0; }
+
+.l-sponsors li, .l-sponsors p {
+  font-size: 1.125em;
+  line-height: 1.45; }
+.l-sponsors .group {
+  background: url(../img/sponsors-balls.png) no-repeat bottom center;
+  background-size: 352px 326px;
+  padding: 20px 20px 350px 20px;
+  font-size: 0.9em; }
+  @media (min-width: 767px) {
+    .l-sponsors .group {
+      padding: 20px 40% 20px 0;
+      font-size: 1em;
+      background-position: right center; } }
+
+#map-canvas {
+  width: 100%;
+  padding: 0;
+  height: 400px; }
+  #map-canvas img {
+    max-width: none; }
+
+.l-contact {
+  border-bottom: solid 10px #25a879; }
+  .l-contact .contact-copy {
+    color: #2fd197;
+    margin-bottom: 20px; }
+    .l-contact .contact-copy:after {
+      content: '';
+      display: block;
+      width: 50px;
+      border-bottom: solid 1px #888;
+      margin: 20px auto 0; }
+  .l-contact .call-out {
+    font-family: 'Lato', Helvetica, Arial, sans-serif; }
+
+.l-register {
+  text-align: center; }
+
+.social-prof {
+  padding-left: 0; }
+
+.social-prof-item {
+  display: inline-block; }
+
+.social-prof-action {
+  background-image: url(../img/social-sprite.png);
+  background-repeat: no-repeat;
+  padding: 1px 0 1px 30px; }
+
+.social-facebook {
+  margin-right: 30px; }
+
+.social-twitter {
+  background-position: 0 -25px; }
 /*# sourceMappingURL=styles.css.map */

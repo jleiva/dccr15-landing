@@ -10,6 +10,30 @@
 <title>DrupalCamp Costa Rica 2015</title>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Nunito:700' rel='stylesheet' type='text/css'>
 <link href="css/styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script>
+	var map;
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(9.939403, -84.047309);
+		var mapOptions = {
+			zoom: 16,
+			center: myLatlng,
+			scrollwheel: false,
+		};
+		map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+			
+			var marker = new google.maps.Marker({
+		      position: myLatlng,
+		      map: map,
+		  });
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
 </head>
 <body>
 <div class="section l-header">
@@ -30,17 +54,28 @@
 <div class="section l-historias">
 	<div class="group">
 		<h2 class="h-section h-light">Testimonios</h2>
-		<div class="quote">
-			<blockquote>"La comunidad de Drupal en Costa Rica ha sido la m&aacute;s acogedora que he encontrado."</blockquote>
-			<cite class="quote-aut">Cecy Correa <strong>Four Kitchens</strong></cite>
-		</div>
-		<div class="quote">
-			<blockquote>"La comunidad de Drupal en Costa Rica ha sido la más acogedora que he encontrado."</blockquote>
-			<cite class="quote-aut">Cecy Correa <strong>Four Kitchens</strong></cite>
-		</div>
-		<div class="quote">
-			<blockquote>"La comunidad de Drupal en Costa Rica ha sido la más acogedora que he encontrado."</blockquote>
-			<cite class="quote-aut">Cecy Correa <strong>Four Kitchens</strong></cite>
+		<div class="quotes-wrap">
+			<div class="quote">
+				<div class="quote-avatar">
+					<img src="img/quote-cecy.jpg" alt="Cecy Correa, Four Kitchens" title="Cecy Correa, Four Kitchens">
+				</div>
+				<blockquote>"La comunidad de Drupal en Costa Rica ha sido la m&aacute;s acogedora que he encontrado."</blockquote>
+				<cite class="quote-aut">Cecy Correa <strong>Four Kitchens</strong></cite>
+			</div>
+			<div class="quote">
+				<div class="quote-avatar">
+					<img src="img/quote-molly.jpg" alt="Molly Byrnes, Phase 2" title="Molly Byrnes, Phase 2">
+				</div>
+				<blockquote>"Drupal Camp Costa Rica is a fantastic event! La communidad Drupal en Costa Rica está llena de personas talentosas y amables. ¡Pura Vida!"</blockquote>
+				<cite class="quote-aut">Molly Byrnes<strong>Phase 2</strong></cite>
+			</div>
+			<div class="quote">
+				<div class="quote-avatar">
+					<img src="img/quote-jesus.jpg" alt="Jesús Olivas, Blink Reaction" title="Jesús Olivas, Blink Reaction">
+				</div>
+				<blockquote>"Drupal Camp Costa Rica tiene un excelente nivel. Es una comunidad muy activa y en constante crecimiento	."</blockquote>
+				<cite class="quote-aut">Jesús Olivas <strong>Blink Reaction</strong></cite>
+			</div>
 		</div>
 	</div>
 </div>
@@ -63,7 +98,7 @@
 	</div>
 </div>
 
-<iframe class="location" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3929.9345606098605!2d-84.047309!3d9.939403000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3870a3f8b5b%3A0x82884a3fe0356f44!2sUniversidad+de+Costa+Rica!5e0!3m2!1ses!2s!4v1423782257720" width="600" height="450" frameborder="0" style="border:0"></iframe>
+<div id="map-canvas"></div>
 
 <div class="section l-register">
 	<div class="group">
@@ -71,8 +106,12 @@
 
 		<h4 class="call-out">Pronto estaremos avisando sobre el proceso de inscripci&oacute;n. ¡Est&eacute; pendiente!</h4>
 		<ul class="social-prof">
-			<li class="social-prof-item"><a href="https://www.facebook.com/drupalcostarica?fref=ts" class="social-prof-action">/drupalcostarica</a></li>
-			<li class="social-prof-item"><a href="https://twitter.com/drupalcr" class="social-prof-action">@drupalcr</a></li>
+			<li class="social-prof-item">
+				<a href="https://www.facebook.com/drupalcostarica?fref=ts" class="social-prof-action social-facebook">/drupalcostarica</a>
+			</li>
+			<li class="social-prof-item">
+				<a href="https://twitter.com/drupalcr" class="social-prof-action social-twitter">@drupalcr</a>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -80,8 +119,8 @@
 	<div class="group">
 		<h2 class="h-section h-light">CONTACTO</h2>
 
-		<h4 class="h-sub-section call-out">Si tienes dudas contacta a los organizadores</h4>
-		<p class="call-out call-cta"><a href="mailto:info@drupalcostarica.com">info@drupalcostarica.com</a></p>
+		<p class="contact-copy">Si tienes dudas contacta a los organizadores:</p>
+		<p class="call-out call-cta"><a href="mailto:info@drupalcostarica.com">camp@drupalcr.org</a></p>
 		<p class="call-out call-cta"><a href="tel:+50622346622">+506 2234-6622</a></p>
 	</div>
 </div>

@@ -75,6 +75,12 @@
   }
 }
 
+@mixin small {
+  @media (min-width: #{$baby-width}) {
+    @content;
+  }
+}
+
 @mixin medium {
   @media (min-width: #{$mama-width}) {
     @content;
