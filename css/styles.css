@@ -389,15 +389,21 @@ blockquote {
 .group {
   margin: 0 auto;
   max-width: 1280px;
-  width: 80%; }
+  width: 90%; }
+  @media (min-width: 767px) {
+    .group {
+      width: 80%; } }
 
 .section {
-  padding: 70px 10px; }
+  padding: 20px 10px; }
   .section:before, .section:after, .section:before, .section:after {
     content: " ";
     display: table; }
   .section:after, .section:after {
     clear: both; }
+  @media (min-width: 767px) {
+    .section {
+      padding: 70px 10px; } }
 
 .l-contact {
   text-align: center; }
@@ -419,19 +425,26 @@ blockquote {
 
 .h-section {
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 1.2em; }
+  @media (min-width: 767px) {
+    .h-section {
+      font-size: 1.5em; } }
 
 .colored-green {
   color: #33b78b;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block; }
 
 .btn-cta {
   background: #e35534; }
   .btn-cta:hover {
     background: #c83c1c; }
 
-.btn-action {
-  margin-left: 10px; }
+@media (min-width: 767px) {
+  .btn-action {
+    margin-left: 10px; } }
 
 @media screen and (max-width: 767px) {
   .l-header {
@@ -465,7 +478,7 @@ blockquote {
   height: 400px;
   width: 212px;
   margin: 0 auto; }
-  @media (min-width: 640px) {
+  @media (min-width: 500px) {
     .intro-tags {
       margin-right: 85px;
       float: left;
@@ -477,7 +490,7 @@ blockquote {
   font-size: 0.9em;
   line-height: 1.45;
   padding: 20px 0 230px 0; }
-  @media (min-width: 640px) {
+  @media (min-width: 500px) {
     .intro-description {
       padding: 20px 0 230px 35%;
       background-position: bottom right; } }
@@ -512,7 +525,7 @@ blockquote {
   margin-right: 1%;
   padding: 40px;
   text-align: left;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-right: 0; }
   @media (min-width: 767px) {
     .quote {
@@ -532,7 +545,7 @@ blockquote {
 
 .quote-aut {
   font-style: normal; }
-  @media (min-width: 640px) {
+  @media (min-width: 500px) {
     .quote-aut strong {
       display: block; } }
 
@@ -552,9 +565,12 @@ blockquote {
   line-height: 1.45; }
 .l-sponsors .group {
   background: url(../img/sponsors-balls.png) no-repeat bottom center;
-  background-size: 352px 326px;
-  padding: 20px 20px 350px 20px;
+  background-size: 100%;
+  padding: 20px 20px 300px 20px;
   font-size: 0.9em; }
+  @media (min-width: 500px) {
+    .l-sponsors .group {
+      background-size: 352px 326px; } }
   @media (min-width: 767px) {
     .l-sponsors .group {
       padding: 20px 40% 20px 0;

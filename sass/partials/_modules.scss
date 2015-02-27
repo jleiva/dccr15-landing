@@ -13,11 +13,17 @@
 .h-section {
   text-align: center;
   text-transform: uppercase;
+  font-size: 1.2em;
+  @include medium {
+    font-size: 1.5em;
+  }
 }
 
 .colored-green {
   color: #33b78b;
   font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 // =Buttons
@@ -25,14 +31,15 @@
 .btn-cta {
     @extend %btn;
     background: #e35534;
-
     &:hover {
         background: darken(#e35534, 10%);
     }
 }
 
 .btn-action {
+  @include medium {
     margin-left: 10px;
+  }
 }
 
 // =Event Date Info
@@ -131,7 +138,7 @@
     margin-right: 1%;
     padding: 40px;
     text-align: left;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-right: 0;
 
     @include medium {
@@ -188,13 +195,17 @@
     }
     .group {
         background: url(../img/sponsors-balls.png) no-repeat bottom center;
-        background-size: 352px 326px;
-        padding: 20px 20px 350px 20px;
+        background-size: 100%;
+        padding: 20px 20px 300px 20px;
         font-size: .9em;
+        @include small {
+            background-size: 352px 326px;
+        }
         @include medium {
             padding: 20px 40% 20px 0;
             font-size: 1em;
             background-position: right center;
+            
         }
     }
 }
